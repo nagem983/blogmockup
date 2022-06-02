@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Mock Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            font-family: sans-serif;
+        }
+        .contact {
+            width: 100%;
+        }
+
+        .topbar {
+            height: 60px;
+            background-color: #96ded1;
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            width: 100%;
+        }
+
+        .topimagelist {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            padding-right: 10px;
+        }
+
+        .topwordlist {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            padding-left: 20px;
+        }
+
+        .margin {
+            padding: 0 20px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .topimage {
+            padding-left: 10px;
+        }
+
+        .topword {
+            padding-left: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .socialimage {
+            height: 20px;
+            width: 20px;
+        }
+
+        .midbar {
+            width: 100vw;
+            height: 150px;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        
+        .dropdowncontent {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .bloglinks {
+            padding: 10px 10px;
+        }
+
+        .dropdown:hover .dropdowncontent {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .internalnav {
+            display: flex;
+            flex-direction: row;
+        }
+       
+        .bagimage {
+            height: 30px;
+            width: 30px;
+        }
+        .stayconnected > ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+        footer {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        footer > div:not(:last-child) {
+            padding-right: 50px;
+        }
+
+        footer > :last-child {
+            text-align: right;
+            flex: 1;
+        }
+
+        .stayconnected {
+            width: 30vw;
+        }
+
+        .sectiontitle {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        @media screen and (min-width: 1000px) {
+            .margin {
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<header id="contact" class="contact">
+    <nav id="topbar" class="topbar margin">
+        <ul class="topimagelist">
+            <li class="topimage">
+                <a class="social-links" href="#"><img class="socialimage" 
+                    src="https://blog.hootsuite.com/wp-content/uploads/2018/09/glyph-logo_May2016-150x150.png" alt="instagram">
+                </a>
+            </li>
+            <li class="topimage">
+                <a class="social-links" href="#"><img class="socialimage"
+                src="https://blog-assets.hootsuite.com/wp-content/uploads/2018/09/flogo-RGB-HEX-Blk-58.png" alt="facebook">
+            </a>
+            </li>
+            <li class="topimage">
+                <a class="social-links" href="#"><img class="socialimage"
+                src="https://th.bing.com/th/id/OIP.N6g8TvCRsQUzpj594YVkrwAAAA?pid=ImgDet&rs=1" alt="pinterest">
+            </a>
+            </li>
+        </ul>
+        <ul class="topwordlist">
+            <li class="topword">
+                <a class="sitelinks" href="#">about</a>
+            </li>
+            <li class="topword">
+                <a class="sitelinks" href="#">subscribe</a>
+            </li>
+            <li class="topword">
+                <a class="sitelinks" href="#">contact</a>
+            </li>
+        </ul>
+    </nav>
+    <nav id="midbar" class="midbar margin">
+        <div class="logo">
+            <a class="logolink" href="#">
+                <img class="logoimage" src="http://placekitten.com/150/100" alt="logoimage">
+            </a>
+        </div>
+        <ul class="internalnav">
+            <li class="internal">
+                <a class="bloglinks" href="#">home</a>
+            </li>
+            <li class="internal dropdown">
+                <a class="bloglinks drop">shop</a>
+                <div class="dropdowncontent">
+                    <a class="bloglinks" href="#">all patterns</a>
+                    <a class="bloglinks" href="#">women's patterns</a>
+                    <a class="bloglinks" href="#">children's patterns</a>
+                </div>
+            </li>
+            <li class="internal">
+                <a class="bloglinks" href="#">blog</a>
+            </li>
+            <li class="internal dropdown">
+                <a class="bloglinks drop">explore</a>
+                <div class="dropdowncontent">
+                    <a class="bloglinks" href="#">get started</a>
+                    <a class="bloglinks" href="#">tutorials</a>
+                    <a class="bloglinks" href="#">patterns</a>
+                    <a class="bloglinks" href="#">fabrics</a>
+                    <a class="bloglinks" href="#">workshops</a>
+                </div>
+            </li>
+        </ul>
+        <div class="searchandstore">
+            <form>
+                <input type="text" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <a class="storeicon" href="#"><img class="bagimage" 
+                src="https://cdn-icons.flaticon.com/png/512/3091/premium/3091221.png?token=exp=1652813662~hmac=bf2d29d598395e39769b9998d8e2adbb"
+            alt="store">
+            </a>
+        </div>
+    </nav>
+</header>
+<footer class="margin">
+    <div class="explore">
+        <p class="sectiontitle">explore</p>
+        <ul>
+            <li>
+                <a href="#">Stockists</a>
+            </li>
+            <li>
+                <a href="#">Fabric</a>
+            </li>
+            <li>
+                <a>Digital Patterns</a>
+            </li>
+            <li>
+                <a>Workshops</a>
+            </li>
+            <li>
+                <a>Wholesale</a>
+            </li>
+            <li>
+                <a>Search</a>
+            </li>
+        </ul>
+    </div>
+    <div class="help">
+        <p class="sectiontitle">help</p>
+        <ul>
+            <li>
+                <a href="#">FAQs</a>
+            </li>
+            <li>
+                <a href="#">Tutorials</a>
+            </li>
+            <li>
+                <a>Terms and Conditions</a>
+            </li>
+            <li>
+                <a>Privacy Policy</a>
+            </li>
+        </ul>
+    </div>
+    <div class="stayconnected">
+        <p class="sectiontitle">stay connected</p>
+        <p class="info">Generic message about staying connected to the blog and content creator by following on social media.</p>
+        <ul class="bottomimagelist">
+            <li class="topimage">
+                <a href="#"><img class="socialimage" 
+                    src="https://blog.hootsuite.com/wp-content/uploads/2018/09/glyph-logo_May2016-150x150.png" alt="instagram">
+                </a>
+            </li>
+            <li class="topimage">
+                <a href="#"><img class="socialimage"
+                src="https://blog-assets.hootsuite.com/wp-content/uploads/2018/09/flogo-RGB-HEX-Blk-58.png" alt="facebook">
+            </a>
+            </li>
+            <li class="topimage">
+                <a href="#"><img class="socialimage"
+                src="https://th.bing.com/th/id/OIP.N6g8TvCRsQUzpj594YVkrwAAAA?pid=ImgDet&rs=1" alt="pinterest">
+            </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footerlogo">
+        <img src="http://placekitten.com/150/150" alt="footerlogo">
+    </div>
+</footer>
+</body>
+</html>
