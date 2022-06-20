@@ -25,6 +25,7 @@
             align-items: center;
             display: flex;
             justify-content: right;
+            flex-wrap: wrap;
         }
 
         .topimagelist {
@@ -41,6 +42,8 @@
         .topwordlist {
             display: flex;
             background-color: grey;
+            flex-wrap: wrap;
+            justify-content: right;
         }
         
         .margin {
@@ -269,29 +272,6 @@
             }
         }
 
-        @media screen and (max-width: 600px) {
-            .topimagelist {
-                justify-content: left;
-                width: 100%;
-            }
-        }
-
-        @media screen and (max-width: 380px) {
-            .topbar {
-                flex-wrap: wrap;
-                height: 80px;
-            }
-        }
-
-        @media screen and (max-width: 297px) {
-            .topbar {
-                height: 120px;
-            }
-            .topwordlist {
-                flex-wrap: wrap;
-                justify-content: right;
-            }
-        }
     </style>
     
 </head>
