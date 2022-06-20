@@ -114,8 +114,14 @@
         }
 
         .hiddenmenu {
-            max-height: 0;
-            overflow: hidden;
+            position: fixed;
+            width: 300px;
+            left: -300px;
+            top: 0;
+            bottom: 0;
+            background: white;
+            transition: left 0.3s;
+            border-right: 0.5px solid grey;
         }
         
         #menu {
