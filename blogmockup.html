@@ -19,7 +19,6 @@
         }
 
         .topbar {
-            height: 50px;
             background-color: #96ded1;
             width: 100%;
             align-items: center;
@@ -36,6 +35,7 @@
         .topimagelist a {
             display: flex;
             align-items: center;
+            padding: 10px 0px;
 
         }
 
@@ -44,6 +44,7 @@
             background-color: grey;
             flex-wrap: wrap;
             justify-content: right;
+            padding: 10px 0px;
         }
         
         .margin {
@@ -75,7 +76,6 @@
 
         .midbar {
             width: 100vw;
-            height: 100px;
             background-color: lightblue;
             display: flex;
             flex-direction: row;
@@ -84,6 +84,13 @@
             text-transform: uppercase;
         }
         
+        .logo {
+            padding: 5px 0;
+        }
+
+        .logoimage {
+            border-radius: 3px;
+        }
         .dropdown {
             position: relative;
         }
@@ -93,6 +100,7 @@
             position: absolute;
             min-width: 160px;
             z-index: 1;
+            border-radius: 3px;
         }
 
         .internalnav > li a {
@@ -116,25 +124,71 @@
             cursor: pointer;
         }
 
+        label {
+            padding-right: 10px;
+        }
+
         .hiddenmenu {
             position: fixed;
             width: 300px;
             left: -300px;
             top: 0;
             bottom: 0;
-            background: white;
+            background: #e5e4e2;
             transition: left 0.3s;
-            border-right: 0.5px solid grey;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
         }
         
-        #menu {
+        .hiddenmenu li {
+            padding-bottom: 10px;
+        }
+        
+        .menu {
             display: none;
         }
         
-        #menu:checked ~ .hiddenmenu {
+        .menu:checked ~ .hiddenmenu {
             max-height: 100%;
             overflow: visible;
             left: 0;
+        }
+
+        .collapserow {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .slidemenu {
+            display: none;
+        }
+
+        .slidemenu:checked ~ .hide {
+            max-height: 100%;
+            overflow: visible;
+            left: 150px;
+        }
+
+        .slidemenu:checked ~ .flipangle {
+            transform: rotate(180deg);
+        }
+        
+        .hide {
+            position: fixed;
+            width: 150px;
+            left: -150px;
+            top: 0;
+            bottom: 0;
+            transition: left 0.3s;
+            padding-top: 20px;
+            background-color: #e5e4e2;
+        }
+
+        .hide > a {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10px;
         }
 
         .bagimage {
@@ -181,6 +235,7 @@
             width: 100%;
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             
         }
 
@@ -194,7 +249,7 @@
         }
 
         .stayconnected {
-            width: 30vw;
+            width: 33vw;
         }
 
         footer > div > :first-child {
@@ -234,44 +289,23 @@
             }
         }
 
-        @media screen and (min-width: 1350px) {
+        @media screen and (min-width: 1200px) {
             .margin {
                 padding: 0 18vw;
             }
         }
 
-        @media screen and (min-width: 1250px) and (max-width: 1349px) {
-            .margin {
-                padding: 0 15vw;
-            }
-        }
-
-        @media screen and (min-width: 1150px) and (max-width: 1249px) {
-            .margin {
-                padding: 0 11vw;
-            }
-        }
-
-        @media screen and (min-width: 1050px) and (max-width: 1149px) {
-            .margin {
-                padding : 0 6vw;
-            }
-        }
-
-        @media screen and (max-width: 650px) {
+        @media screen and (max-width: 768px) {
             footer > div:last-child {
                 display: none;
             }
+        }
 
-            footer {
-                flex-wrap: wrap;
-            }
-
+        @media screen and (max-width: 576px) {
             .stayconnected {
                 width: 100%;
             }
         }
-
     </style>
     
 </head>
@@ -344,32 +378,40 @@
         </ul>
         <div class="searchandstore">
             <div class="collapsiblemenu">
-                <input type="checkbox" id="menu">
+                <input type="checkbox" id="menu" class="menu">
                     <label for="menu"><i class="fa fa-bars" aria-hidden="true"></i></label>
                     <div class="hiddenmenu">
                         <ul>
                             <li>
                             <a href="#">home</a>
                             </li>
-                            <li class="dropdown">
-                                <a>shop</a>
-                                <div class="dropdowncontent">
-                                    <a href="#">all patterns</a>
-                                    <a href="#">women's patterns</a>
-                                    <a href="#">children's patterns</a>
+                            <li>
+                                <div class="collapsiblemenu collapserow">
+                                    <input type="checkbox" id="slidemenu1" class="slidemenu">
+                                        <label for="slidemenu1">store</label>
+                                        <div class="flipangle"><i class="fas fa-angle-double-right"></i></div>
+                                            <div class="hide">
+                                                <a href="#">all patterns</a>
+                                                <a href="#">women's patterns</a>
+                                                <a href="#">children's patterns</a>
+                                            </div>
                                 </div>
                             </li>
                             <li>
                                 <a href="#">blog</a>
                             </li>
-                            <li class="dropdown">
-                                <a>explore</a>
-                                <div class="dropdowncontent">
-                                    <a href="#">get started</a>
-                                    <a href="#">tutorials</a>
-                                    <a href="#">patterns</a>
-                                    <a href="#">fabrics</a>
-                                    <a href="#">workshops</a>
+                            <li>
+                                <div class="collapsiblemenu collapserow">
+                                    <input type="checkbox" id="slidemenu2" class="slidemenu">
+                                        <label for="slidemenu2">explore</label>
+                                        <div class="flipangle"><i class="fas fa-angle-double-right"></i></div>
+                                            <div class="hide">
+                                                <a href="#">get started</a>
+                                                <a href="#">tutorials</a>
+                                                <a href="#">patterns</a>
+                                                <a href="#">fabrics</a>
+                                                <a href="#">workshops</a>
+                                            </div>
                                 </div>
                             </li>
                         </ul>
@@ -393,6 +435,12 @@
         </div>
     </nav>
 </header>
+
+<section>
+    <h1>Kittens Or Your Subject Here</h1>
+    <p>Kittens are cute but any information you want can go here</p>
+    <a href="#" class="sectionlink1">see something</a>
+</section>
 <footer class="margin">
     <div id="explore">
         <p>explore</p>
@@ -456,7 +504,7 @@
         </ul>
     </div>
     <div class="footerlogo">
-        <img src="http://placekitten.com/150/150" alt="footerlogo">
+        <img class= "logoimage" src="http://placekitten.com/150/150" alt="footerlogo">
     </div>
 </footer>
 </body>
