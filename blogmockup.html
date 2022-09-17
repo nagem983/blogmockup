@@ -18,8 +18,23 @@
             width: 100%;
         }
 
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 2.3rem;
+            font-weight: 400;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+        
         .topbar {
-            background-color: #96ded1;
+            background-color: #99badd;
             width: 100%;
             align-items: center;
             display: flex;
@@ -29,7 +44,7 @@
 
         .topimagelist {
             display: flex;
-            background-color: white;
+            /*background-color: white;*/
         }
 
         .topimagelist a {
@@ -41,7 +56,7 @@
 
         .topwordlist {
             display: flex;
-            background-color: grey;
+            /*background-color: grey;*/
             flex-wrap: wrap;
             justify-content: right;
             padding: 10px 0px;
@@ -75,8 +90,8 @@
         }
 
         .midbar {
-            width: 100vw;
-            background-color: lightblue;
+            width: 100%;
+            /*background-color: lightblue;*/
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -139,6 +154,7 @@
             display: flex;
             flex-direction: column;
             padding: 20px;
+            z-index: 1;
         }
         
         .hiddenmenu li {
@@ -231,12 +247,228 @@
             flex-direction: row;
         }
 
+        .firstsection {
+            height: 50rem;
+            background: #e5e4e2 url(http://placekitten.com/900/600) no-repeat center / cover;
+           /* background-image: url(http://placekitten.com/900/600);
+            background-color: #e5e4e2;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;*/
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .firstsectioncontainer {
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 1.5px;
+            max-width: 20rem;
+            text-align: center;
+            align-items: center;
+            position: absolute;
+            bottom: 10rem;
+            right: 5rem;
+        }
+
+        .firstsectioncontainer h1 {
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+            letter-spacing: 1rem;
+        }
+
+        .firstsectioncontainer p {
+            line-height: 2;
+        }
+
+        .firstsectioncontainer a {
+            background-color: #99badd;
+            max-width: 15rem;
+            font-size: 1.2rem;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        .sectionheading {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .sectionheading h2 {
+            text-transform: uppercase;
+        }
+        .sectionheading a {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            border-bottom: 1px solid lightgray;  
+        }
+
+        /*.tiles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+
+        .tilecolumn {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 33.3%;
+            flex: 30%
+        }*/
+
+        .tiles {
+            /*display: grid;
+            grid-gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+            columns: 300px 3;
+            column-gap: 30px;
+            padding-bottom: 100px;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .projecttile {
+            /*width: 100%;*/
+            height: fit-content;
+            padding: 15px;
+            background-color: #e5e4e2;
+            margin-top: 0px;
+            margin-bottom: 30px;
+        }
+
+        .projecttile > a > p {
+            color: #99badd;
+            font-size: 1.2rem;
+        }
+
+        .projecttile > a > div {
+            display: flex;
+            align-items: center;
+        }
+
+        .projecttile > a > div > p {
+            padding-right: 20px;
+            text-transform: capitalize;
+        }
+
+        .twochoices {
+            display: grid;
+            grid-gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .choicecontainer {
+            background-image: url(http://placekitten.com/600/600);
+            background-color: #e5e4e2;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 300px;
+            overflow: hidden;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .choicecontainer:after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        .choicecontainer h2 {
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            letter-spacing: 1rem;
+        }
+
+        .choicecontainer a {
+            background-color: #99badd;
+            max-width: 15rem;
+            font-size: 1.2rem;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .emaillist {
+            margin: 100px 0;
+            background-color: #e5e4e2;
+            height: auto;
+            padding: 13rem 0;
+        }
+
+        .emaillistheading {
+            margin-bottom: 2rem;
+        }
+
+        .emaillistheading h3 {
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 1.4rem;
+            letter-spacing: .3rem;
+            text-align: center;
+        }
+
+        .emailform {
+            text-align: center;
+            background-color: white;
+            height: auto;
+            margin: 0 20px;
+            padding: 4rem 2rem;
+        }
+
+        .emailform p {
+            padding-bottom: 1.5rem;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .emailform input:not([type=submit]) {
+            color: #dcdcdc;
+            font-size: 1.2rem;
+            border: 1px solid lightgray;
+            padding: .8rem 2rem .8rem 1rem;
+            margin: 0 1rem 1rem 0;
+        }
+
+        .emailform input[type=submit] {
+            color: white;
+            background-color: #99badd;
+            font-size: 1.2rem;
+            border: none;
+            text-align: center;
+            text-transform: uppercase;
+            padding: .8rem 2rem;
+            cursor: pointer;
+        }
+
+        .socialposts {
+            display: grid;
+            grid-gap: 35px;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .postimage {
+           max-width: 400px;
+           max-height: 400px;
+           overflow: hidden;
+        }
+
+        .postpic {
+            max-width: 100%;
+            height: auto;
+        }
+
+
         footer {
             width: 100%;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            
+            margin-top: 100px;    
         }
 
         footer > div:not(:last-child) {
@@ -249,7 +481,7 @@
         }
 
         .stayconnected {
-            width: 33vw;
+            width: 30vw;
         }
 
         footer > div > :first-child {
@@ -289,15 +521,40 @@
             }
         }
 
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1365px) {
             .margin {
-                padding: 0 18vw;
+                padding: 0 14vw;
+            }
+            .firstsection {
+                margin: 0 14vw;
+            }
+
+            .emailform {
+                margin: 0 14vw;
             }
         }
+
+       /* @media screen and (min-width: 710px) and (max-width: 1024px) {
+            .tilecolumn {
+            max-width: 50%;
+            flex: 46%;
+            }
+        }
+            
+        @media screen and (max-width: 709px) {
+            .tilecolumn {
+            max-width: 100%;
+            flex: 95%;
+        }
+        }*/
 
         @media screen and (max-width: 768px) {
             footer > div:last-child {
                 display: none;
+            }
+
+            .socialposts {
+                grid-template-columns: auto auto;
             }
         }
 
@@ -305,6 +562,18 @@
             .stayconnected {
                 width: 100%;
             }
+
+            .emailform {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .emailform input:not([type=submit]) {
+                width: 100%;
+            }
+
         }
     </style>
     
@@ -436,11 +705,187 @@
     </nav>
 </header>
 
-<section>
-    <h1>Kittens Or Your Subject Here</h1>
-    <p>Kittens are cute but any information you want can go here</p>
-    <a href="#" class="sectionlink1">see something</a>
+<section class="firstsection">
+    <div class="firstsectioncontainer">
+        <h1>kittens or your subject here</h1>
+        <p>Kittens are cute but any information you want can go here</p>
+        <a href="#">see something</a>
+    </div>
 </section>
+
+<section class="secondsection margin">
+    <div class="sectionheading">
+        <h2>cool stuff</h2>
+        <a href="#">where to find</a>
+    </div>
+    <div class="tiles">
+        <div class="tilecolumn">
+            <div class="projecttile">
+                <a href="#">
+                    <img class="tileimage" src="http://placekitten.com/250/250" style="width:100%" alt="kitten">
+                    <p>December 31, 2024</p>
+                    <h3>Kitten and More Animals</h3>
+                    <div>
+                        <p>more</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>   
+        <div class="tilecolumn">    
+             <div class="projecttile">
+                <a href="#">
+                    <img class="tileimage" src="http://placekitten.com/250/200" style="width:100%" alt="kitten">
+                    <p>December 31, 2024</p>
+                    <h3>Kitten and More Animals</h3>
+                    <div>
+                        <p>more</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="tilecolumn">
+            <div class="projecttile">
+                <a href="#">
+                    <img class="tileimage" src="http://placekitten.com/250/270" style="width:100%" alt="kitten">
+                    <p>December 31, 2024</p>
+                    <h3>Kitten and More Animals</h3>
+                    <div>
+                        <p>more</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="tilecolumn">   
+            <div class="projecttile">
+                <a href="#">
+                    <img class="tileimage" src="http://placekitten.com/250/210"  style="width:100%"alt="kitten">
+                    <p>December 31, 2024</p>
+                    <h3>Kitten and More Animals</h3>
+                    <div>
+                        <p>more</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="tilecolumn">
+            <div class="projecttile">
+                <a href="#">
+                    <img class="tileimage" src="http://placekitten.com/250/270" style="width:100%" alt="kitten">
+                    <p>December 31, 2024</p>
+                    <h3>Kitten and More Animals</h3>
+                    <div>
+                        <p>more</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="tilecolumn">
+            <div class="projecttile">
+                <a href="#">
+                    <img class="tileimage" src="http://placekitten.com/250/250" style="width:100%" alt="kitten">
+                    <p>December 31, 2024</p>
+                    <h3>Kitten and More Animals</h3>
+                    <div>
+                        <p>more</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="thirdsection margin">
+    <div class="sectionheading">
+        <h2>explore</h2>
+        <a href="#">more fun</a>
+    </div>
+
+    <div class="twochoices">
+        <div class="choicecontainer">
+            <div>
+                <h2>kittens</h2>
+                <a href="#">click me</a>
+            </div>
+        </div>
+        <div class="choicecontainer">
+            <div>
+                <h2>cats</h2>
+                <a href="#">click me</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="emaillist">
+    <div class="emaillistheading">
+        <h3>sign up here</h3>
+    </div>
+    <div class="emailform">
+        <p class=>Fill this out to get fun updates on all things cat!</p>
+        <form>
+            <input type="text" name="firstname" value="First name">
+            <input type="text" name="lastname" value="Last name">
+            <input type="email" name="email" value="Email address">
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </div>
+</section>
+
+<section class="fourthsection margin">
+    <div class="sectionheading">
+        <h2>follow me</h2>
+        <a href="#">Social Posts</a>
+    </div>
+    <div class="socialposts">
+        <div class="postimage">
+            <a href="#">
+                <img class="postpic" src="http://placekitten.com/500/500" alt="kitten">
+            </a>
+        </div>
+        <div class="postimage">
+            <a href="#">
+                <img class="postpic" src="http://placekitten.com/600/600" alt="kitten">
+            </a>
+        </div>
+        <div class="postimage">
+            <a href="#">
+                <img class="postpic" src="http://placekitten.com/700/700" alt="kitten">
+            </a>
+        </div>
+        <div class="postimage">
+            <a href="#">
+                <img class="postpic" src="http://placekitten.com/550/550" alt="kitten">
+            </a>
+        </div>
+        <div class="postimage">
+            <a href="#">
+                <img class="postpic" src="http://placekitten.com/570/570" alt="kitten">
+            </a>
+        </div>
+        <div class="postimage">
+            <a href="#">
+                <img class="postpic" src="http://placekitten.com/625/625" alt="kitten">
+            </a>
+        </div>
+        <div class="postimage">
+            <a href="#">
+                <img class="postpic" src="http://placekitten.com/510/510" alt="kitten">
+            </a>
+        </div>
+        <div class="postimage">
+            <a href="#">
+                <img class="postpic" src="http://placekitten.com/505/505" alt="kitten">
+            </a>
+        </div>
+    </div>
+</section>
+
 <footer class="margin">
     <div id="explore">
         <p>explore</p>
